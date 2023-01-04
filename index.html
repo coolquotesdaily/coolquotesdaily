@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Quotes Daily</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="randomCaption()">
+  <div class="header">
+      <h1>"Cool Quotes Daily"</h1>
+      <p id="randomCaption"></p>
+  </div>
+  
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!--
+    <div class="mySlides fade">     
+      <h2 class="date">January 5th, 2023</h2>
+      <br>
+      <div class="img"><img src="img/jorf.png"></div>
+      <br>
+      <q>I'm gonna fuck the moon, and then I'm gonna fuck the Mars.</q>
+      <p class="author">- Jeffrey Bezos, Entrepreneur</p>
+    </div>
+    -->
+
+    <div class="mySlides fade">      
+      <h2 class="date">January 4th, 2023</h2>
+      <br>
+      <div class="img"><img src="img/morg.png"></div>
+      <br>
+      <q>Does anyone know how to edit pages on Wikipedia? There's a few things on there I'd like to change.</q>
+      <p class="author">- Mark Zuckerberg, Tech Wiz</p>
+    </div>
+
+    <div class="mySlides fade">
+      <h2 class="date">January 3rd, 2023</h2>       
+      <br>
+      <div class="img"><img src="img/rowl.png"></div>
+      <br>
+      <q>What people don't understand about Harry Potter is that all the things in those books were made up.</q>
+      <p class="author">- J.K. Rowling, Creative Writer</p>  
+    </div>
+
+    <div class="mySlides fade">
+      <h2 class="date">January 2nd, 2023</h2>     
+      <br>
+      <div class="img"><img src="img/marg.png"></div>
+      <br>
+      <q>I didn't know about Wikipedia until yesterday. Pretty neat website!</q>
+      <p class="author">- Mark Zuckerberg, Business Owner</p>
+    </div>
+    
+    <div class="mySlides fade">
+      <h2 class="date">January 1st, 2023</h2>
+      <br>
+      <div class="img"><img src="img/jarf.png"></div>
+      <br>
+      <q>Every living creature on Earth will pay for what happened to me in my 10th grade biology class.</q>
+      <p class="author">- Jeffrey Bezos, Rocket Enthusiast</p>
+    </div>
+    
+    <!-- Next/prev buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <!--
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  -->
+  <script src="app.js"></script>
+</body>
+</html>
