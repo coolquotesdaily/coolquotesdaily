@@ -21,7 +21,7 @@
 
   img {
     position: relative;
-    width: 25%;
+    object-fit: contain; 
     height: auto;
   }
   
