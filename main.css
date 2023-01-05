@@ -23,7 +23,7 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 40%;
+    width: 44%;
     height: auto;
     border-radius: 5%;
   }
@@ -58,15 +58,15 @@
   
   /* Add an italic font style to all quotes */
   q {font-style: italic;
-    font-size: 150%;
+    font-size: 125%;
   }
   
   .author {
-    font-size: 150%;
+    font-size: 110%;
   } 
 
   .date {
-    font-size: 175%;
+    font-size: 150%;
   }
 
   .fade {
