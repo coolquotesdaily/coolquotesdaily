@@ -6,6 +6,8 @@
  .slideshow-container {
     position: relative;
     background: white;
+    margin: 0;
+    padding: 0;
   }
   
   .header {
@@ -32,7 +34,7 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 171px;
     width: auto;
     margin-top: -22px;
     padding: 16px;

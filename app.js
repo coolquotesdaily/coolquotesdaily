@@ -33,10 +33,28 @@ function randomCaption()
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
+  var next = document.getElementsByClassName("next");
+  var prev = document.getElementsByClassName("prev");
+
+  /* if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
+  slides[slideIndex-1].style.display = "block"; */
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  if (slideIndex == slides.length) {
+    next[0].style.display = "none";
+  }
+  else if (slideIndex == 1) {
+    prev[0].style.display = "none";
+  }
+  else {
+    next[0].style.display = "block";
+    prev[0].style.display = "block";
+  }
   slides[slideIndex-1].style.display = "block";
 } 
