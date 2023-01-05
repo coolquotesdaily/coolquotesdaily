@@ -32,26 +32,22 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 25%;
-    width: 2%;
-    padding-top: 0.9%;
-    padding-bottom: 1.1%;
-    padding-left: 0.75%;
-    padding-right: 0.75%;
+    top: 40%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
     color: #888;
     font-weight: bold;
-    font-size: 500%;
-    border-radius: 0 15% 15% 0;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 6px 6px 0;
     user-select: none;
   }
-  
+
   /* Position the "next button" to the right */
   .next {
-    position: absolute;
     right: 0;
-    padding-left: 1.0%;
-    padding-right: 0.5%;
-    border-radius: 15% 0 0 15%;
+    border-radius: 6px 0 0 6px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
