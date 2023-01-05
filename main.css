@@ -15,14 +15,15 @@
   /* Slides */
   .mySlides {
     display: none;
-    padding: 80px;
+    padding: 2.5%;
     text-align: center;
   }
 
   img {
     position: relative;
-    object-fit: contain; 
+    width: 25%;
     height: auto;
+    border-radius: 5%;
   }
   
   /* Next & previous buttons */
@@ -31,12 +32,12 @@
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -30px;
-    padding: 16px;
+    margin-top: -1.5%;
+    padding: 1%;
     color: #888;
     font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    font-size: 500%;
+    border-radius: 0 15% 15% 0;
     user-select: none;
   }
   
@@ -44,7 +45,7 @@
   .next {
     position: absolute;
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 15% 0 0 15%;
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -53,41 +54,17 @@
     color: white;
   }
   
-  /* The dot/bullet/indicator container */
-  .dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  /* Add a background color to the active dot/circle */
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
   /* Add an italic font style to all quotes */
   q {font-style: italic;
-    font-size: xx-large;
+    font-size: 200%;
   }
   
   .author {
-    font-size: large;
+    font-size: 150%;
   } 
 
   .date {
-    font-size: x-large;
+    font-size: 175%;
   }
 
   .fade {
@@ -96,6 +73,6 @@
   }
   
   @keyframes fade {
-    from {opacity: .4}
+    from {opacity: .25}
     to {opacity: 1}
   }
