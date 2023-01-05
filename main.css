@@ -15,13 +15,16 @@
   /* Slides */
   .mySlides {
     display: none;
-    padding: 2.5%;
+    padding: 2%;
     text-align: center;
   }
 
   img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    width: 25%;
+    width: 32%;
     height: auto;
     border-radius: 5%;
   }
@@ -30,9 +33,9 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 32%;
     width: auto;
-    margin-top: -1.5%;
+    margin-top: auto;
     padding: 1%;
     color: #888;
     font-weight: bold;
@@ -56,7 +59,7 @@
   
   /* Add an italic font style to all quotes */
   q {font-style: italic;
-    font-size: 200%;
+    font-size: 175%;
   }
   
   .author {
