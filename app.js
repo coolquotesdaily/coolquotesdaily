@@ -47,14 +47,14 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   if (slideIndex == slides.length) {
-    next[0].style.display = "none";
+    next[slideIndex-1].style.display = "none";
   }
   else if (slideIndex == 1) {
-    prev[0].style.display = "none";
+    prev[slideIndex-1].style.display = "none";
   }
   else {
-    next[0].style.display = "block";
-    prev[0].style.display = "block";
+    next[slideIndex-1].style.display = "block";
+    prev[slideIndex-1].style.display = "block";
   }
   slides[slideIndex-1].style.display = "block";
 } 
