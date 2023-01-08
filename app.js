@@ -1,7 +1,74 @@
 var slideIndex = 1;
+quoteDataList = 
+[
+  {"quoteDate": "January 9th, 2023", 
+  "imgSrc":"grusk.png", 
+  "quoteText":"Did you check out the meme I sent you? It's from 4chan.", 
+  "authorName":"Elon Musk", 
+  "authorDescription":"Billionaire"},
+
+  {"quoteDate": "January 8th, 2023", 
+  "imgSrc":"rul.png", 
+  "quoteText":"If men can be women too, then that takes power and attention away from me, and I can't allow that.", 
+  "authorName":"J.K. Rowling", 
+  "authorDescription":"Activist"},
+
+  {"quoteDate": "January 7th, 2023", 
+  "imgSrc":"roge.png", 
+  "quoteText":"You have to grab life by the balls, kick it right in its balls, and when that ball's in your court, you play the game of life.", 
+  "authorName":"Joe Rogan", 
+  "authorDescription":"Podcaster"},
+
+  {"quoteDate": "January 6th, 2023", 
+  "imgSrc":"shup.png", 
+  "quoteText":"How come when I take my penis out and spin it around in public, suddenly I'm a sex pervert, but when I ask a woman to do the same, suddenly I'm a sex pervert? Men just aren't treated fairly in today's world.", 
+  "authorName":"Ben Shapiro", 
+  "authorDescription":"Sex Pervert"},
+
+  {"quoteDate": "January 5th, 2023", 
+  "imgSrc":"jorf.png", 
+  "quoteText":"First I'm going to fuck the Moon, and then I'm going to fuck Mars.", 
+  "authorName":"Jeffrey Bezos", 
+  "authorDescription":"Rocket Enthusiast"},
+
+  {"quoteDate": "January 4th, 2023", 
+  "imgSrc":"morg.png", 
+  "quoteText":"Does anyone know how to edit pages on Wikipedia? There's a few things on there I'd like to change.", 
+  "authorName":"Mark Zuckerberg", 
+  "authorDescription":"Tech Wiz"},
+
+  {"quoteDate": "January 3rd, 2023", 
+  "imgSrc":"rowl.png", 
+  "quoteText":"What people don't understand about Harry Potter is that all the things in those books are made up.", 
+  "authorName":"J.K. Rowling", 
+  "authorDescription":"Creative Writer"},
+
+  {"quoteDate": "January 2nd, 2023", 
+  "imgSrc":"marg.png", 
+  "quoteText":"I didn't know about Wikipedia until yesterday. Pretty neat website!", 
+  "authorName":"Mark Zuckerberg", 
+  "authorDescription":"Business Owner"},
+
+  {"quoteDate": "January 1st, 2023", 
+  "imgSrc":"jarf.png", 
+  "quoteText":"Every living creature on Earth will pay for what happened to me in my 10th grade biology class.", 
+  "authorName":"Jeffrey Bezos", 
+  "authorDescription":"Entrepreneur"}
+];
+
 showSlides(slideIndex);
 
-function plusSlides(n) {
+/*
+function importData(quoteData) {
+  var tempQuoteDataList = [];
+  for (quoteDataObject in quoteData) {
+    tempQuoteDataList.unshift(quoteDataObject);
+  }
+  return tempQuoteDataList;
+}
+*/
+
+function changeSlide(n) {
   showSlides(slideIndex += n);
 }
 
@@ -9,8 +76,8 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function randomCaption()
-{
+/*
+function randomCaption() {
   var captions = [
     "Served up fresh",
     "Steamin' hot...ooh baby!",
@@ -29,12 +96,17 @@ function randomCaption()
   var caption = captions[Math.floor(Math.random() * (captions.length))];
   document.getElementById("randomCaption").innerHTML = caption; 
 }
+*/
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var next = document.getElementsByClassName("next");
-  var prev = document.getElementsByClassName("prev");
+function showSlides(nextSlide) {
+  slideIndex = nextSlide;
+  var nextButtonElement = document.getElementById("nextButtonElement");
+  var prevButtonElement = document.getElementById("prevButtonElement");
+  var quoteDateElement = document.getElementById("quoteDateElement");
+  var quoteImgElement = document.getElementById("quoteImgElement");
+  var quoteTextElement = document.getElementById("quoteTextElement");
+  var quoteAuthorElement = document.getElementById("quoteAuthorElement");
+  var quoteDataObject = quoteDataList[slideIndex-1];
 
   /* if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
@@ -43,6 +115,9 @@ function showSlides(n) {
     }
   slides[slideIndex-1].style.display = "block"; */
 
+  /*
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -56,5 +131,23 @@ function showSlides(n) {
     next[slideIndex-1].style.display = "block";
     prev[slideIndex-1].style.display = "block";
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "block"; 
+  slides[slideIndex-1].style.display = "block"; 
+  */
+
+  if (slideIndex == quoteDataList.length) {
+    nextButtonElement.style.display = "none";
+  }
+  else if (slideIndex == 1) {
+    prevButtonElement.style.display = "none";
+  }
+  else {
+    nextButtonElement.style.display = "block";
+    prevButtonElement.style.display = "block";
+  }
+  quoteDateElement.textContent = quoteDataObject.quoteDate;
+  quoteImgElement.src = "img/" + quoteDataObject.imgSrc;
+  console.log(quoteImgElement.src = "img/" + quoteDataObject.imgSrc);
+  quoteTextElement.textContent = quoteDataObject.quoteText;
+  quoteAuthorElement.textContent = quoteDataObject.authorName + ", " + quoteDataObject.authorDescription;
 } 
