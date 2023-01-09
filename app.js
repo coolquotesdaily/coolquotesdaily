@@ -1,3 +1,17 @@
+/*
+  {"quoteDate": "", 
+  "imgSrc":"", 
+  "quoteText":"", 
+  "authorName":"", 
+  "authorDescription":""},
+
+  {"quoteDate": "January 10th, 2023", 
+  "imgSrc":"jurd.png", 
+  "quoteText":"Penis pills how to enlarge penis actual big penis make penis hard longer how to fix penis real.", 
+  "authorName":"Jordan Peterson", 
+  "authorDescription":"Googler"},
+
+*/
 var slideIndex = 1;
 quoteDataList = 
 [
@@ -58,16 +72,6 @@ quoteDataList =
 
 showSlides(slideIndex);
 
-/*
-function importData(quoteData) {
-  var tempQuoteDataList = [];
-  for (quoteDataObject in quoteData) {
-    tempQuoteDataList.unshift(quoteDataObject);
-  }
-  return tempQuoteDataList;
-}
-*/
-
 function changeSlide(n) {
   showSlides(slideIndex += n);
 }
@@ -99,41 +103,18 @@ function randomCaption() {
 */
 
 function showSlides(nextSlide) {
-  slideIndex = nextSlide;
   var nextButtonElement = document.getElementById("nextButtonElement");
   var prevButtonElement = document.getElementById("prevButtonElement");
   var quoteDateElement = document.getElementById("quoteDateElement");
   var quoteImgElement = document.getElementById("quoteImgElement");
   var quoteTextElement = document.getElementById("quoteTextElement");
   var quoteAuthorElement = document.getElementById("quoteAuthorElement");
-  var quoteDataObject = quoteDataList[slideIndex-1];
+  var quoteContainerElement = document.getElementById("quoteContainerElement");
+  var quoteDataObject = quoteDataList[nextSlide-1];
 
-  /* if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-  slides[slideIndex-1].style.display = "block"; */
+  document.getElementById("quoteSlideElement").style.display = "none";
 
-  /*
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  if (slideIndex == slides.length) {
-    next[slideIndex-1].style.display = "none";
-  }
-  else if (slideIndex == 1) {
-    prev[slideIndex-1].style.display = "none";
-  }
-  else {
-    next[slideIndex-1].style.display = "block";
-    prev[slideIndex-1].style.display = "block";
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  slides[slideIndex-1].style.display = "block"; 
-  */
+  slideIndex = nextSlide;
 
   if (slideIndex == quoteDataList.length) {
     nextButtonElement.style.display = "none";
@@ -145,9 +126,31 @@ function showSlides(nextSlide) {
     nextButtonElement.style.display = "block";
     prevButtonElement.style.display = "block";
   }
+
   quoteDateElement.textContent = quoteDataObject.quoteDate;
   quoteImgElement.src = "img/" + quoteDataObject.imgSrc;
-  console.log(quoteImgElement.src = "img/" + quoteDataObject.imgSrc);
   quoteTextElement.textContent = quoteDataObject.quoteText;
   quoteAuthorElement.textContent = quoteDataObject.authorName + ", " + quoteDataObject.authorDescription;
+
+  document.getElementById("quoteSlideElement").style.display = "block";
+  fadeIn(quoteImgElement, quoteContainerElement);
+  
 } 
+
+function fadeIn(quoteImgElement, quoteContainerElement) {
+  quoteImgElement.classList.add("fadeIn");
+  quoteContainerElement.classList.add("fadeIn");
+  setTimeout(function() {
+    quoteImgElement.classList.remove("fadeIn");
+    quoteContainerElement.classList.remove("fadeIn");
+  }, 750);
+}
+
+function fadeOut(quoteImgElement, quoteContainerElement) {
+  quoteImgElement.classList.add("fadeOut");
+  quoteContainerElement.classList.add("fadeOut");
+  setTimeout(function() {
+    quoteImgElement.classList.remove("fadeOut");
+    quoteContainerElement.classList.remove("fadeOut");
+  }, 750);
+}

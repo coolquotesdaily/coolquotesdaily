@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="slideshow-container">
+  <div class="slideshowContainer">
 
-    <div class ="slide-container">
+    <div class ="slideContainer">
       
-      <div class="slide fade" id="quoteSlideElement">     
+      <div class="slide" id="quoteSlideElement">     
         <h2 class="date" id="quoteDateElement"></h2>
-        <div class="image-container">
-          <div class="img"><img id="quoteImgElement"></div>
+        <div class="imageContainer" id="imageContainerElement">
+          <img class="img" id="quoteImgElement">
           <a class="prev" id="prevButtonElement" onclick="changeSlide(-1)">&#10094;</a>
           <a class="next" id="nextButtonElement" onclick="changeSlide(1)">&#10095;</a>
         </div>
         <br>
-        <div class="quote-container">
+        <div class="quoteContainer" id="quoteContainerElement">
          <q class="quote" id="quoteTextElement"></q>
          <p class="author" id="quoteAuthorElement"></p>
         </div>
