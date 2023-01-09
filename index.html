@@ -7,118 +7,23 @@
     <title>Cool Quotes Daily</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body onload="randomCaption()">
-  <!--
-  <div class="header">
-      <h1>"Cool Quotes Daily"</h1>
-      <p id="randomCaption"></p>
-  </div>
-  -->
-
-  <!-- Slideshow container -->
+<body>
   <div class="slideshow-container">
 
     <div class ="slide-container">
-    
-      <!--
-
-      -->
-
-      <div class="mySlides fade">     
-        <h2 class="date">January 8th, 2023</h2>
+      
+      <div class="slide fade" id="quoteSlideElement">     
+        <h2 class="date" id="quoteDateElement"></h2>
         <div class="image-container">
-          <div class="img"><img src="img/rul.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="img"><img id="quoteImgElement"></div>
+          <a class="prev" id="prevButtonElement" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" id="nextButtonElement" onclick="changeSlide(1)">&#10095;</a>
         </div>
         <br>
-        <q>If men can be women too, then that takes power and attention away from me, and I can't allow that.</q>
-        <p class="author">- J.K. Rowling, Activist</p>
-      </div>
-
-      <div class="mySlides fade">     
-        <h2 class="date">January 7th, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/roge.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="quote-container">
+         <q class="quote" id="quoteTextElement"></q>
+         <p class="author" id="quoteAuthorElement"></p>
         </div>
-        <br>
-        <q>You have to grab life by the balls, kick it right in its balls, and when that ball's in your court, you play the game of life.</q>
-        <p class="author">- Joe Rogan, Podcaster</p>
-      </div>
-
-      <div class="mySlides fade">     
-        <h2 class="date">January 6th, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/shup.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>How come when I take my penis out and spin it around in public, suddenly I'm a sex pervert, but when I ask a woman to do the same, suddenly I'm a sex pervert? Men just aren't treated fairly in today's world.</q>
-        <p class="author">- Ben Shapiro, Sex Pervert</p>
-      </div>
-
-      <div class="mySlides fade">     
-        <h2 class="date">January 5th, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/jorf.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>First I'm going to fuck the Moon, and then I'm going to fuck Mars.</q>
-        <p class="author">- Jeffrey Bezos, Rocket Enthusiast</p>
-      </div>
-
-      </div>
-      <div class="mySlides fade">      
-        <h2 class="date">January 4th, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/morg.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>Does anyone know how to edit pages on Wikipedia? There's a few things on there I'd like to change.</q>
-        <p class="author">- Mark Zuckerberg, Tech Wiz</p>
-      </div>
-
-      <div class="mySlides fade">
-        <h2 class="date">January 3rd, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/rowl.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>What people don't understand about Harry Potter is that all the things in those books are made up.</q>
-        <p class="author">- J.K. Rowling, Creative Writer</p>  
-      </div>
-
-      <div class="mySlides fade">
-        <h2 class="date">January 2nd, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/marg.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>I didn't know about Wikipedia until yesterday. Pretty neat website!</q>
-        <p class="author">- Mark Zuckerberg, Business Owner</p>
-      </div>
-    
-      <div class="mySlides fade">
-        <h2 class="date">January 1st, 2023</h2>
-        <div class="image-container">
-          <div class="img"><img src="img/jarf.png"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <q>Every living creature on Earth will pay for what happened to me in my 10th grade biology class.</q>
-        <p class="author">- Jeffrey Bezos, Entrepreneur</p>
       </div>
 
     </div>
