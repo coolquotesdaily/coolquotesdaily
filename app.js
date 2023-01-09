@@ -143,9 +143,10 @@ function fadeIn(quoteImgElement, quoteContainerElement) {
   setTimeout(function() {
     quoteImgElement.classList.remove("fadeIn");
     quoteContainerElement.classList.remove("fadeIn");
-  }, 750);
+  }, 1250);
 }
 
+/*
 function fadeOut(quoteImgElement, quoteContainerElement) {
   quoteImgElement.classList.add("fadeOut");
   quoteContainerElement.classList.add("fadeOut");
@@ -154,3 +155,4 @@ function fadeOut(quoteImgElement, quoteContainerElement) {
     quoteContainerElement.classList.remove("fadeOut");
   }, 750);
 }
+*/
