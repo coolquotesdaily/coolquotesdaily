@@ -5,16 +5,17 @@
   "authorName":"", 
   "authorDescription":""},
 
-  {"quoteDate": "January 10th, 2023", 
-  "imgSrc":"jurd.png", 
-  "quoteText":"Penis pills how to enlarge penis actual big penis make penis hard longer how to fix penis real.", 
-  "authorName":"Jordan Peterson", 
-  "authorDescription":"Googler"},
 
 */
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 10th, 2023", 
+  "imgSrc":"jurd.png", 
+  "quoteText":"Penis pills how to enlarge penis actual big penis make penis hard longer how to fix penis real.", 
+  "authorName":"Jordan Peterson", 
+  "authorDescription":"Googler"},
+  
   {"quoteDate": "January 9th, 2023", 
   "imgSrc":"grusk.png", 
   "quoteText":"Did you check out the meme I sent you? It's from 4chan.", 
@@ -138,12 +139,13 @@ function showSlides(nextSlide) {
 } 
 
 function fadeIn(quoteImgElement, quoteContainerElement) {
+  fadeInAnimationDuration = 1250;
   quoteImgElement.classList.add("fadeIn");
   quoteContainerElement.classList.add("fadeIn");
   setTimeout(function() {
     quoteImgElement.classList.remove("fadeIn");
     quoteContainerElement.classList.remove("fadeIn");
-  }, 1250);
+  }, fadeInAnimationDuration);
 }
 
 /*
