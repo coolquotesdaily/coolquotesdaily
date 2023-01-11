@@ -5,11 +5,18 @@
   "authorName":"", 
   "authorDescription":""},
 
-
+  
 */
+
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 11th, 2023", 
+  "imgSrc":"merg.png", 
+  "quoteText":"Guys help, I'm trying to fix my page on Wikipedia. It says I was born of an unholy union between a snake and an albino jackal, and that's not true! I can't believe someone would spread lies on the internet.", 
+  "authorName":"Mark Zuckerberg", 
+  "authorDescription":"Concerned Citizen"},
+  
   {"quoteDate": "January 10th, 2023", 
   "imgSrc":"jurd.png", 
   "quoteText":"Penis pills how to enlarge penis actual big penis make penis hard longer how to fix penis real.", 
@@ -114,6 +121,7 @@ function showSlides(nextSlide) {
   var quoteDataObject = quoteDataList[nextSlide-1];
 
   document.getElementById("quoteSlideElement").style.display = "none";
+  quoteImgElement.src = "blank.png";
 
   slideIndex = nextSlide;
 
