@@ -11,6 +11,12 @@
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 12th, 2023", 
+  "imgSrc":"rusk.png", 
+  "quoteText":"In ten years, technology will have advanced to the point where I will have a robot wife who is programmed to never divorce me.", 
+  "authorName":"Elon Musk", 
+  "authorDescription":"Visionary"},
+
   {"quoteDate": "January 11th, 2023", 
   "imgSrc":"merg.png", 
   "quoteText":"Guys help, I'm trying to fix my page on Wikipedia. It says I was born of an unholy union between a snake and an albino jackal, and that's not true! I can't believe someone would spread lies on the internet.", 
