@@ -11,6 +11,12 @@
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 13th, 2023", 
+  "imgSrc":"roag.png", 
+  "quoteText":"The only good vaccine is the one that protects you from being gay.", 
+  "authorName":"Joe Rogan", 
+  "authorDescription":"Brain Trauma Victim"},
+
   {"quoteDate": "January 12th, 2023", 
   "imgSrc":"rusk.png", 
   "quoteText":"In ten years, technology will have advanced to the point where I will have a robot wife who is programmed to never divorce me.", 
