@@ -11,6 +11,12 @@
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 14th, 2023", 
+  "imgSrc":"taet.png", 
+  "quoteText":"People call me a misogynist, but I've actually worked with a ton of women.", 
+  "authorName":"Andrew Tate", 
+  "authorDescription":"Human Trafficker"},
+
   {"quoteDate": "January 13th, 2023", 
   "imgSrc":"roag.png", 
   "quoteText":"The only good vaccine is the one that protects you from being gay.", 
