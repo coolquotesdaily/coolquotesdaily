@@ -11,6 +11,12 @@
 var slideIndex = 1;
 quoteDataList = 
 [
+  {"quoteDate": "January 15th, 2023", 
+  "imgSrc":"void.png", 
+  "quoteText":"They told me National Treasure was going to be a patriotic movie. Then they made us rub piss all over the back of the Declaration of Independence. It was just a prop, but I was extremely offended.", 
+  "authorName":"Jon Voight", 
+  "authorDescription":"Movie Star"},
+
   {"quoteDate": "January 14th, 2023", 
   "imgSrc":"taet.png", 
   "quoteText":"People call me a misogynist, but I've actually worked with a ton of women.", 
