@@ -2,8 +2,8 @@ name: push to deployment branch
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron:  '0 5 * * *'
+  #schedule:
+  #  - cron:  '0 5 * * *'
   
   workflow_dispatch:
   
